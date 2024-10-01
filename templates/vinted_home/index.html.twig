@@ -8,13 +8,67 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/theos/Documents/symfony/VintedKids/src/Controller/VintedHomeController.php</code></li>
-        <li>Your template at <code>C:/Users/theos/Documents/symfony/VintedKids/templates/vinted_home/index.html.twig</code></li>
-    </ul>
+<section class="list-product">
+    <div class="card" style="width: 18rem;">
+        <img src="image" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</section>
+<div class="card text-center position-absolute bottom-0 start-0 end-0">
+<div class="d-flex align-self-center w-100 justify-content-around">
+ <ul class="navbar-nav  mb-2 mb-lg-0 text-start">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Vinted</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button">
+            A propos de Vinted
+          </a>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button">
+            Dropdown
+          </a>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button">
+            Dropdown
+          </a>
+        </li>
+        
+      </ul>
+     <ul class="navbar-nav  mb-2 mb-lg-0 text-start">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Découvrir</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button">
+            Comment ça marche
+          </a>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button">
+            Vérification de l'article
+          </a>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button">
+            Applications mobiles
+          </a>
+        </li>
+        
+      </ul>
+</div>
+  <div class="card-body d-flex align-self-center">
+    <p class="card-text px-3">Politique de confidentialité.</p>
+    <p class="card-text px-3">Politique de cookie.</p>
+    <p class="card-text px-3">Termes et Conditions.</p>
+  </div>
 </div>
 {% endblock %}
+
