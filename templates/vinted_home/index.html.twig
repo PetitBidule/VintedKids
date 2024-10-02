@@ -1,7 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello VintedHomeController!{% endblock %}
-
+{% block profileUser %}
+ {% if id == null %}
+    <li class="nav-item">
+        <a class="nav-link" href="/login">Log In</a>
+            </li>
+            <li class="nav-item">
+        <a class="nav-link" href="/register">Sign In</a>
+    </li>
+ {% endif %}
+  {% if id != null %}
+    <li class="nav-item">
+        <a class="nav-link" href="/">Profile</a>
+    </li>
+ {% endif %}
+ 
+  
+{% endblock %}
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
@@ -10,16 +26,29 @@
 
 
 <section class="list-product">
-    <div class="card" style="width: 18rem;">
-        <img src="image" class="card-img-top" alt="...">
+<div class="d-flex">
+ <div class="card m-2" style="width: 18rem;">
+        <img src="https://cdn.discordapp.com/attachments/1290659554308390932/1291012816886562927/1727790258.png?ex=66fe8ce1&is=66fd3b61&hm=c51539b437b7aa84c57ba9c77fcfac362c1221104e3eabf6a178adb9c97e5e26&" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="/product" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
+      <div class="card m-2" style="width: 18rem;">
+        <img src="https://cdn.discordapp.com/attachments/1290659554308390932/1291012816886562927/1727790258.png?ex=66fe8ce1&is=66fd3b61&hm=c51539b437b7aa84c57ba9c77fcfac362c1221104e3eabf6a178adb9c97e5e26&" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/product" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+   
+    
 </section>
-<div class="card text-center position-absolute bottom-0 start-0 end-0">
+{# <div class="card text-center" style="position: absolute; bottom: 0">
 <div class="d-flex align-self-center w-100 justify-content-around">
  <ul class="navbar-nav  mb-2 mb-lg-0 text-start">
         <li class="nav-item">
@@ -27,12 +56,12 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button">
-            A propos de Vinted
+            {{jeuneKiwi}}
           </a>
         </li>
          <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button">
-            Dropdown
+            {{username}}
           </a>
         </li>
          <li class="nav-item dropdown">
@@ -48,7 +77,6 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button">
-            Comment ça marche
           </a>
         </li>
          <li class="nav-item dropdown">
@@ -69,6 +97,6 @@
     <p class="card-text px-3">Politique de cookie.</p>
     <p class="card-text px-3">Termes et Conditions.</p>
   </div>
-</div>
+</div> #}
 {% endblock %}
 
